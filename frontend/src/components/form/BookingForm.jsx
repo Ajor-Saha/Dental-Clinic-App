@@ -29,7 +29,7 @@ const BookingForm = () => {
     try {
         setloading(true);
         setError(false);
-        const res = await fetch('/api/user/createAppointment', {
+        const res = await fetch('https://dental-clinic-app.vercel.app/api/user/createAppointment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

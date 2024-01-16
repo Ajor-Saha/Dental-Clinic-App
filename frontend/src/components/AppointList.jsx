@@ -9,7 +9,7 @@ const AppointList = () => {
   useEffect(() => {
     const getAppointments = async () => {
       try {
-        const res = await fetch(`/api/user/getAppointments?userRef=${currentUser._id}`,{
+        const res = await fetch(`https://dental-clinic-app.vercel.app/api/user/getAppointments?userRef=${currentUser._id}`,{
             method: "GET",
             headers: {
               "Content-Type": "application/json",
