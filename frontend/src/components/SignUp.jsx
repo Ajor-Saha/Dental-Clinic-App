@@ -17,7 +17,7 @@ const SignUp = () => {
     try {
       setLoading(true);
       setError(false);
-      const res = await fetch('http://localhost:8000/api/auth/signup', {
+      const res = await fetch('https://dental-clinic-app.vercel.app/api/auth/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -23,7 +23,7 @@ const SignIn = () => {
     e.preventDefault();
     try {
       dispatch(signInStart());
-      const res = await fetch("http://localhost:8000/api/auth/signin", {
+      const res = await fetch("https://dental-clinic-app.vercel.app/api/auth/signin", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
