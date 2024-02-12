@@ -19,7 +19,6 @@ const updateUser = async (req, res, next) => {
           username: req.body.username,
           email: req.body.email,
           password: req.body.password,
-          profilePicture: req.body.profilePicture,
         },
       },
       { new: true }
@@ -56,8 +55,8 @@ const createAppointment = async (req, res, next) => {
 
 const getAppointment = async (req, res, next) => {
   try {
-    const userId = req.user.id;
-    const appointments = await Appointment.find({ userRef: userId});
+    
+    const appointments = await Appointment.find({ userRef: req.user.id});
 
     return res.status(200).json(appointments);
   } catch (error) {

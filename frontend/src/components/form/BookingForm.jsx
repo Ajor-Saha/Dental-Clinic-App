@@ -23,13 +23,13 @@ const BookingForm = () => {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.id]: e.target.value });
   };
-  
+ 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
         setloading(true);
         setError(false);
-        const res = await fetch('https://dental-clinic-app.vercel.app/api/user/createAppointment', {
+        const res = await fetch('http://localhost:8000/api/user/createAppointment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
