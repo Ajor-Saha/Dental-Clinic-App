@@ -8,7 +8,7 @@ export default defineConfig({
       overlay: false,
     },
     proxy: {
-      '/api': 'http://localhost:8000/',
+      '/api': 'https://dental-clinic-app.vercel.app/',
     },
   },
   plugins: [react()],
